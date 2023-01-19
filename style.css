@@ -1,0 +1,11 @@
+@import url('./media.css');
+
+body {
+  background: blue
+}
+
+@media (--screen-tablet) {
+  body {
+    background: red;
+  }
+}

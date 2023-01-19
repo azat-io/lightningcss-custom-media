@@ -1,0 +1,12 @@
+{
+  "name": "lightningcss-custom-media",
+  "private": true,
+  "scripts": {
+    "start": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "vite": "^4.0.4",
+    "vite-plugin-lightningcss": "^0.0.3"
+  }
+}
