@@ -3,23 +3,11 @@ import type { ConfigEnv, UserConfigExport } from 'vite'
 import lightningcss from 'vite-plugin-lightningcss'
 import { defineConfig } from 'vite'
 
-export default ({ mode }: ConfigEnv): UserConfigExport => {
-  return defineConfig({
-    build: {
-      target: 'esnext',
-      sourcemap: false,
-      assetsDir: '',
-    },
-    css: {
-      modules: {
-        generateScopedName:
-          mode === 'development'
-            ? '[local]--[hash:base64:4]'
-            : '[hash:base64:4]',
-      },
-    },
+export default ({ mode }: ConfigEnv): UserConfigExport =>
+  defineConfig({
     plugins: [
       lightningcss({
+        browserslist: 'last 2 versions',
         drafts: {
           customMedia: true,
         },
@@ -29,4 +17,3 @@ export default ({ mode }: ConfigEnv): UserConfigExport => {
       port: 3000,
     },
   })
-}

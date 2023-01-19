@@ -1,7 +1,7 @@
-@import url('./media.css');
+@custom-media --screen-tablet (width >= 860px);
 
 body {
-  background: blue
+  background: blue;
 }
 
 @media (--screen-tablet) {
